@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Learning Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1 class="header-title">Daily Learning Journal</h1>
+                <p class="header-subtitle">Track your daily learning, topics, assignments, and practical work</p>
+            </div>
+            <div class="header-date">
+                <p id="currentDate"></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Add Entry Form Section -->
+        <section class="add-entry-section">
+            <h2 class="section-title">Add New Learning Entry</h2>
+            <form id="entryForm" class="entry-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="entryDate">Date</label>
+                        <input type="date" id="entryDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="entryTopic">Topic / Module Name</label>
+                        <input type="text" id="entryTopic" placeholder="e.g., Networking Hardware Devices" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="entryDetails">Learning Details</label>
+                    <textarea id="entryDetails" rows="4" placeholder="Write your learning details here..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="entryImportant">Important Points</label>
+                    <textarea id="entryImportant" rows="3" placeholder="Key takeaways and important points..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="entryQuery">Query</label>
+                    <textarea id="entryQuery" rows="3" placeholder="e.g., search query, question, or keyword"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="entryTools">Tools / Software Used</label>
+                    <input type="text" id="entryTools" placeholder="e.g., VMware, Kali Linux, VS Code">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Add Entry</button>
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics-section">
+            <div class="stat-card">
+                <div class="stat-number" id="totalEntries">2</div>
+                <div class="stat-label">Total Entries</div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="filter-section">
+            <h2 class="section-title">Search & Filter</h2>
+            <div class="filter-controls">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search by topic, details, or tools..." class="search-input">
+                    <span class="search-icon">🔎</span>
+                </div>
+
+                <button id="clearFilters" class="btn btn-secondary" type="button">Clear Filters</button>
+
+                <div class="filter-group">
+                    <input type="date" id="filterDate" class="filter-select" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal Entries Section -->
+        <section class="journal-section">
+            <h2 class="section-title">My Learning Journal</h2>
+            <div id="journalContainer" class="journal-container">
+                <!-- Journal cards will be inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
